@@ -1,0 +1,12 @@
+@{ Layout = "_Layout"; }
+
+
+@model HairSalon.Models.Client
+
+<p>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</p>
+<p>Stylist: @Html.ActionLink(@$"{Model.Stylist.Name}", "Details", "Stylists", new { id = @Model.StylistId} )</p>
+<p>@Html.DisplayNameFor(model => model.ClientNotes): @Html.DisplayFor(model => model.ClientNotes)</p>
+
+
+
+<p>@Html.ActionLink("Edit", "Edit", new { id = Model.ClientId}, new { @Class = "btn btn-primary" })</p>
